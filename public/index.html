@@ -21,7 +21,6 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Design System Colors */
         :root {
             --background: #FFFFFF;
             --foreground: #000000;
@@ -38,7 +37,6 @@
         .text-24 { font-size: 24px; }
         .text-32 { font-size: 32px; }
         .text-120 { font-size: 120px; }
-
         .font-normal { font-weight: 400; }
         .font-medium { font-weight: 500; }
         .font-semibold { font-weight: 600; }
@@ -247,7 +245,6 @@
             border-color: #000000;
         }
 
-        /* Loading State */
         .loading-dots {
             display: flex;
             gap: 8px;
@@ -582,6 +579,236 @@
             color: #8E8E93;
         }
 
+        /* Document Editor */
+        .document-view {
+            display: none;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .document-title {
+            font-size: 32px;
+            font-weight: 600;
+            border: none;
+            outline: none;
+            width: 100%;
+            margin-bottom: 24px;
+        }
+
+        .document-title::placeholder {
+            color: #E5E5E5;
+        }
+
+        .document-editor {
+            min-height: 400px;
+            font-size: 16px;
+            line-height: 1.6;
+            outline: none;
+            white-space: pre-wrap;
+        }
+
+        .document-editor:empty:before {
+            content: attr(data-placeholder);
+            color: #8E8E93;
+        }
+
+        .document-toolbar {
+            display: flex;
+            gap: 8px;
+            padding: 16px 0;
+            border-bottom: 1px solid #E5E5E5;
+            margin-bottom: 24px;
+        }
+
+        .toolbar-btn {
+            width: 32px;
+            height: 32px;
+            background: none;
+            border: 1px solid #E5E5E5;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .toolbar-btn:hover {
+            background: var(--hover);
+            border-color: #000000;
+        }
+
+        .toolbar-btn.active {
+            background: #000000;
+            color: #FFFFFF;
+            border-color: #000000;
+        }
+
+        /* Board View */
+        .board-view {
+            display: none;
+        }
+
+        .board-columns {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            padding-bottom: 16px;
+        }
+
+        .board-column {
+            min-width: 280px;
+            background: #F5F5F5;
+            padding: 16px;
+        }
+
+        .column-header {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .task-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            min-height: 200px;
+        }
+
+        .task-card {
+            background: #FFFFFF;
+            border: 1px solid #E5E5E5;
+            padding: 12px;
+            cursor: move;
+            transition: all 0.2s;
+        }
+
+        .task-card:hover {
+            border-color: #000000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .task-card.dragging {
+            opacity: 0.5;
+        }
+
+        .task-title {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .task-meta {
+            font-size: 12px;
+            color: #8E8E93;
+        }
+
+        .add-task-btn {
+            width: 100%;
+            padding: 8px;
+            background: none;
+            border: 1px dashed #E5E5E5;
+            cursor: pointer;
+            font-size: 14px;
+            color: #8E8E93;
+            margin-top: 8px;
+            transition: all 0.2s;
+        }
+
+        .add-task-btn:hover {
+            border-color: #000000;
+            color: #000000;
+        }
+
+        /* Chat View */
+        .chat-view {
+            display: none;
+            height: 100%;
+        }
+
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 64px);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 24px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .chat-message {
+            display: flex;
+            gap: 12px;
+        }
+
+        .message-avatar {
+            width: 32px;
+            height: 32px;
+            background: #000000;
+            color: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+
+        .message-content {
+            flex: 1;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+
+        .message-author {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .message-time {
+            font-size: 12px;
+            color: #8E8E93;
+        }
+
+        .message-text {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .chat-input-wrapper {
+            border-top: 1px solid #E5E5E5;
+            padding: 16px 0;
+        }
+
+        .chat-input {
+            width: 100%;
+            min-height: 48px;
+            max-height: 120px;
+            padding: 12px 16px;
+            border: 1px solid #E5E5E5;
+            font-size: 14px;
+            font-family: inherit;
+            resize: vertical;
+            outline: none;
+        }
+
+        .chat-input:focus {
+            border-color: #000000;
+        }
+
         /* Command Palette */
         .command-palette {
             display: none;
@@ -662,6 +889,62 @@
             color: #8E8E93;
         }
 
+        /* Create Menu */
+        .create-menu {
+            display: none;
+            position: absolute;
+            top: 64px;
+            right: 40px;
+            width: 200px;
+            background: #FFFFFF;
+            border: 1px solid #000000;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            z-index: 50;
+        }
+
+        .create-menu-item {
+            padding: 12px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.2s;
+            border-bottom: 1px solid #E5E5E5;
+        }
+
+        .create-menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .create-menu-item:hover {
+            background: var(--hover);
+        }
+
+        /* Settings View */
+        .settings-view {
+            display: none;
+            max-width: 600px;
+        }
+
+        .settings-section {
+            margin-bottom: 40px;
+        }
+
+        .settings-section h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .settings-item {
+            margin-bottom: 24px;
+        }
+
+        .settings-label {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            display: block;
+        }
+
         /* Utility Classes */
         .hidden { display: none !important; }
         .text-center { text-align: center; }
@@ -674,6 +957,7 @@
                 left: -240px;
                 z-index: 10;
                 transition: left 0.3s;
+                background: #FFFFFF;
             }
 
             .sidebar.open {
@@ -686,6 +970,14 @@
 
             .question-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .board-columns {
+                flex-direction: column;
+            }
+
+            .board-column {
+                min-width: 100%;
             }
         }
     </style>
@@ -822,7 +1114,7 @@
                     </div>
                 </nav>
                 <div class="sidebar-footer">
-                    <div class="nav-item">
+                    <div class="nav-item" data-view="settings">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="3"></circle>
                             <path d="M12 1v6m0 6v6m4.22-13.22l-4.22 4.22m0 4.44l4.22 4.22M23 12h-6m-6 0H1m18.22-4.22l-4.22 4.22m0 4.44l4.22 4.22"></path>
@@ -846,8 +1138,15 @@
                     </div>
                     <div class="header-actions">
                         <button class="create-btn" id="create-btn">+</button>
-                        <div class="avatar">JD</div>
+                        <div class="avatar" id="user-avatar">JD</div>
                     </div>
+                </div>
+
+                <!-- Create Menu -->
+                <div class="create-menu" id="create-menu">
+                    <div class="create-menu-item" data-action="document">New Document</div>
+                    <div class="create-menu-item" data-action="board">New Board</div>
+                    <div class="create-menu-item" data-action="chat">New Chat</div>
                 </div>
 
                 <!-- Content Area -->
@@ -866,14 +1165,14 @@
                                 </p>
                             </div>
                             <div class="quick-actions">
-                                <div class="quick-action">
+                                <div class="quick-action" data-action="document">
                                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                                         <polyline points="14 2 14 8 20 8"></polyline>
                                     </svg>
                                     <span class="text-14 font-medium">Create a document</span>
                                 </div>
-                                <div class="quick-action">
+                                <div class="quick-action" data-action="board">
                                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <rect x="3" y="3" width="7" height="7"></rect>
                                         <rect x="14" y="3" width="7" height="7"></rect>
@@ -882,14 +1181,14 @@
                                     </svg>
                                     <span class="text-14 font-medium">Start a project</span>
                                 </div>
-                                <div class="quick-action">
+                                <div class="quick-action" data-action="chat">
                                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                                         <circle cx="9" cy="7" r="4"></circle>
                                         <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                                         <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                                     </svg>
-                                    <span class="text-14 font-medium">Invite teammates</span>
+                                    <span class="text-14 font-medium">Start a chat</span>
                                 </div>
                             </div>
                         </div>
@@ -903,83 +1202,74 @@
                             <button class="filter-tab">Pinned</button>
                             <button class="filter-tab">Shared</button>
                         </div>
-                        <div id="work-list">
-                            <div class="work-item">
-                                <div class="work-item-main">
-                                    <svg class="work-item-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="3" y="3" width="7" height="7"></rect>
-                                        <rect x="14" y="3" width="7" height="7"></rect>
-                                        <rect x="14" y="14" width="7" height="7"></rect>
-                                        <rect x="3" y="14" width="7" height="7"></rect>
-                                    </svg>
-                                    <div class="work-item-content">
-                                        <h3>Q4 Planning</h3>
-                                        <p>3 active tasks, 5 people</p>
+                        <div id="work-list"></div>
+                    </div>
+
+                    <!-- Document View -->
+                    <div id="document-view" class="document-view">
+                        <input type="text" class="document-title" id="doc-title" placeholder="Untitled">
+                        <div class="document-toolbar">
+                            <button class="toolbar-btn" data-cmd="bold">B</button>
+                            <button class="toolbar-btn" data-cmd="italic">I</button>
+                            <button class="toolbar-btn" data-cmd="underline">U</button>
+                        </div>
+                        <div class="document-editor" id="doc-editor" contenteditable="true" data-placeholder="Start writing..."></div>
+                    </div>
+
+                    <!-- Board View -->
+                    <div id="board-view" class="board-view">
+                        <h2 class="text-24 font-semibold" style="margin-bottom: 24px;" id="board-title">New Board</h2>
+                        <div class="board-columns" id="board-columns"></div>
+                    </div>
+
+                    <!-- Chat View -->
+                    <div id="chat-view" class="chat-view">
+                        <div class="chat-container">
+                            <div class="chat-messages" id="chat-messages">
+                                <div class="chat-message">
+                                    <div class="message-avatar">JD</div>
+                                    <div class="message-content">
+                                        <div class="message-header">
+                                            <span class="message-author">You</span>
+                                            <span class="message-time">just now</span>
+                                        </div>
+                                        <div class="message-text">Welcome to your new chat!</div>
                                     </div>
-                                </div>
-                                <div class="work-item-meta">
-                                    <span>Board</span>
-                                    <span>·</span>
-                                    <span>2h ago</span>
                                 </div>
                             </div>
-
-                            <div class="work-item">
-                                <div class="work-item-main">
-                                    <svg class="work-item-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                        <polyline points="14 2 14 8 20 8"></polyline>
-                                    </svg>
-                                    <div class="work-item-content">
-                                        <h3>Marketing Campaign Brief</h3>
-                                        <p>Updated by Sarah</p>
-                                    </div>
-                                </div>
-                                <div class="work-item-meta">
-                                    <span>Doc</span>
-                                    <span>·</span>
-                                    <span>5h ago</span>
-                                </div>
-                            </div>
-
-                            <div class="work-item">
-                                <div class="work-item-main">
-                                    <svg class="work-item-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="3" y="3" width="7" height="7"></rect>
-                                        <rect x="14" y="3" width="7" height="7"></rect>
-                                        <rect x="14" y="14" width="7" height="7"></rect>
-                                        <rect x="3" y="14" width="7" height="7"></rect>
-                                    </svg>
-                                    <div class="work-item-content">
-                                        <h3>Sprint 12</h3>
-                                        <p>In progress</p>
-                                    </div>
-                                </div>
-                                <div class="work-item-meta">
-                                    <span>Board</span>
-                                    <span>·</span>
-                                    <span>1d ago</span>
-                                </div>
-                            </div>
-
-                            <div class="work-item">
-                                <div class="work-item-main">
-                                    <svg class="work-item-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                        <polyline points="14 2 14 8 20 8"></polyline>
-                                    </svg>
-                                    <div class="work-item-content">
-                                        <h3>Team Wiki</h3>
-                                        <p>8 people</p>
-                                    </div>
-                                </div>
-                                <div class="work-item-meta">
-                                    <span>Doc</span>
-                                    <span>·</span>
-                                    <span>3d ago</span>
-                                </div>
+                            <div class="chat-input-wrapper">
+                                <textarea class="chat-input" id="chat-input" placeholder="Type a message..." rows="1"></textarea>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- Settings View -->
+                    <div id="settings-view" class="settings-view">
+                        <div class="settings-section">
+                            <h2>Account</h2>
+                            <div class="settings-item">
+                                <label class="settings-label">Full name</label>
+                                <input type="text" class="input-field" id="settings-name" value="John Doe">
+                            </div>
+                            <div class="settings-item">
+                                <label class="settings-label">Email</label>
+                                <input type="email" class="input-field" id="settings-email" value="john@example.com">
+                            </div>
+                        </div>
+                        <div class="settings-section">
+                            <h2>Workspace</h2>
+                            <div class="settings-item">
+                                <label class="settings-label">Workspace name</label>
+                                <input type="text" class="input-field" id="settings-workspace" value="My Workspace">
+                            </div>
+                        </div>
+                        <button class="btn" style="width: auto; padding: 0 24px;">Save Changes</button>
+                    </div>
+
+                    <!-- You View -->
+                    <div id="you-view" class="hidden">
+                        <h2 class="text-24 font-semibold" style="margin-bottom: 24px;">Your Tasks</h2>
+                        <p class="text-14 text-secondary">Tasks assigned to you will appear here.</p>
                     </div>
                 </div>
             </div>
@@ -997,55 +1287,28 @@
                 </svg>
                 <input type="text" class="command-input" id="command-input" placeholder="Search everything...">
             </div>
-            <div class="command-list">
-                <div class="command-group">
-                    <div class="command-group-heading">Recent</div>
-                    <div class="command-item">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="3" width="7" height="7"></rect>
-                            <rect x="14" y="3" width="7" height="7"></rect>
-                            <rect x="14" y="14" width="7" height="7"></rect>
-                            <rect x="3" y="14" width="7" height="7"></rect>
-                        </svg>
-                        Q4 Planning Board
-                    </div>
-                    <div class="command-item">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                        </svg>
-                        Marketing Campaign Doc
-                    </div>
-                </div>
-                <div class="command-group">
-                    <div class="command-group-heading">People</div>
-                    <div class="command-item">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                        Sarah Johnson
-                    </div>
-                    <div class="command-item">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                        Mike Chen
-                    </div>
-                </div>
-            </div>
+            <div class="command-list" id="command-list"></div>
         </div>
     </div>
 
     <script>
-        // App State
+        // ==================== DATA STORAGE ====================
+        const AppData = {
+            user: { name: 'John Doe', email: 'john@example.com', initials: 'JD' },
+            documents: [],
+            boards: [],
+            chats: [],
+            messages: []
+        };
+
         let currentScreen = 'launch';
         let currentQuestion = 1;
-        let onboardingAnswers = [];
-        let userEmail = '';
+        let currentView = 'home';
+        let currentDocument = null;
+        let currentBoard = null;
+        let draggedTask = null;
 
-        // Launch Sequence
+        // ==================== LAUNCH SEQUENCE ====================
         setTimeout(() => {
             document.getElementById('logo-stage').classList.add('hidden');
             document.getElementById('wordmark-stage').classList.remove('hidden');
@@ -1060,11 +1323,10 @@
             }, 400);
         }, 3500);
 
-        // Auth Flow
+        // ==================== AUTH FLOW ====================
         document.getElementById('continue-btn').addEventListener('click', () => {
             const email = document.getElementById('email-input').value;
             if (email) {
-                userEmail = email;
                 document.getElementById('welcome-view').classList.add('hidden');
                 document.getElementById('signup-view').classList.remove('hidden');
                 document.getElementById('email-display').value = email;
@@ -1072,50 +1334,41 @@
         });
 
         document.getElementById('email-input').addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                document.getElementById('continue-btn').click();
-            }
+            if (e.key === 'Enter') document.getElementById('continue-btn').click();
         });
 
         document.getElementById('signup-btn').addEventListener('click', () => {
             const name = document.getElementById('name-input').value;
             const password = document.getElementById('password-input').value;
             if (name && password) {
-                // Go to onboarding
+                AppData.user.name = name;
+                AppData.user.initials = name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
                 document.getElementById('auth-screen').style.display = 'none';
                 document.getElementById('onboarding-screen').style.display = 'block';
                 currentScreen = 'onboarding';
             }
         });
 
-        // Onboarding
+        // ==================== ONBOARDING ====================
         const questionCards = document.querySelectorAll('.question-card');
         questionCards.forEach(card => {
             card.addEventListener('click', function() {
-                const answer = this.getAttribute('data-answer');
-
-                // Visual feedback
                 this.classList.add('selected');
-
-                // Wait and advance
                 setTimeout(() => {
-                    onboardingAnswers.push(answer);
-
                     if (currentQuestion < 3) {
-                        // Next question
                         document.getElementById(`question-${currentQuestion}`).classList.add('hidden');
                         currentQuestion++;
                         document.getElementById(`question-${currentQuestion}`).classList.remove('hidden');
                         document.getElementById('current-question').textContent = currentQuestion;
                     } else {
-                        // Complete onboarding
                         document.getElementById(`question-${currentQuestion}`).classList.add('hidden');
                         document.getElementById('building-workspace').classList.remove('hidden');
-
                         setTimeout(() => {
                             document.getElementById('onboarding-screen').style.display = 'none';
                             document.getElementById('app-screen').style.display = 'block';
+                            document.getElementById('user-avatar').textContent = AppData.user.initials;
                             currentScreen = 'app';
+                            initializeApp();
                         }, 1500);
                     }
                 }, 300);
@@ -1125,90 +1378,426 @@
         document.getElementById('skip-onboarding').addEventListener('click', () => {
             document.getElementById('onboarding-screen').style.display = 'none';
             document.getElementById('app-screen').style.display = 'block';
+            document.getElementById('user-avatar').textContent = AppData.user.initials;
             currentScreen = 'app';
+            initializeApp();
         });
 
-        // Navigation
+        // ==================== APP INITIALIZATION ====================
+        function initializeApp() {
+            // Add sample data
+            AppData.documents.push(
+                { id: 1, title: 'Marketing Campaign Brief', content: 'Sample content...', type: 'doc', updated: new Date(Date.now() - 5 * 60 * 60 * 1000) },
+                { id: 2, title: 'Team Wiki', content: '', type: 'doc', updated: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000) }
+            );
+
+            AppData.boards.push(
+                { id: 1, title: 'Q4 Planning', columns: [
+                    { id: 'todo', title: 'To Do', tasks: [
+                        { id: 1, title: 'Research competitors', description: 'Analyze top 3 competitors' },
+                        { id: 2, title: 'Draft messaging', description: '' }
+                    ]},
+                    { id: 'doing', title: 'In Progress', tasks: [
+                        { id: 3, title: 'Design mockups', description: 'Create initial designs' }
+                    ]},
+                    { id: 'done', title: 'Done', tasks: [
+                        { id: 4, title: 'Stakeholder approval', description: '' }
+                    ]}
+                ], updated: new Date(Date.now() - 2 * 60 * 60 * 1000) },
+                { id: 2, title: 'Sprint 12', columns: [
+                    { id: 'todo', title: 'To Do', tasks: [] },
+                    { id: 'doing', title: 'In Progress', tasks: [] },
+                    { id: 'done', title: 'Done', tasks: [] }
+                ], updated: new Date(Date.now() - 24 * 60 * 60 * 1000) }
+            );
+
+            renderWorkList();
+        }
+
+        // ==================== NAVIGATION ====================
         const navItems = document.querySelectorAll('.nav-item[data-view]');
         navItems.forEach(item => {
             item.addEventListener('click', function() {
                 const view = this.getAttribute('data-view');
-
-                // Update active state
+                switchView(view);
                 navItems.forEach(n => n.classList.remove('active'));
                 this.classList.add('active');
-
-                // Show view
-                if (view === 'home') {
-                    document.getElementById('home-view').style.display = 'flex';
-                    document.getElementById('work-view').style.display = 'none';
-                } else if (view === 'work') {
-                    document.getElementById('home-view').style.display = 'none';
-                    document.getElementById('work-view').style.display = 'block';
-                }
             });
         });
 
-        // Command Palette
+        function switchView(view) {
+            currentView = view;
+            const views = ['home-view', 'work-view', 'document-view', 'board-view', 'chat-view', 'settings-view', 'you-view'];
+            views.forEach(v => {
+                const el = document.getElementById(v);
+                if (el) el.style.display = 'none';
+            });
+            document.getElementById(`${view}-view`).style.display = view === 'home' ? 'flex' : 'block';
+        }
+
+        // ==================== CREATE MENU ====================
+        let createMenuOpen = false;
+        document.getElementById('create-btn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            createMenuOpen = !createMenuOpen;
+            document.getElementById('create-menu').style.display = createMenuOpen ? 'block' : 'none';
+        });
+
+        document.addEventListener('click', () => {
+            if (createMenuOpen) {
+                document.getElementById('create-menu').style.display = 'none';
+                createMenuOpen = false;
+            }
+        });
+
+        document.querySelectorAll('.create-menu-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const action = item.getAttribute('data-action');
+                createNew(action);
+            });
+        });
+
+        // Quick actions
+        document.querySelectorAll('.quick-action').forEach(action => {
+            action.addEventListener('click', () => {
+                const actionType = action.getAttribute('data-action');
+                createNew(actionType);
+            });
+        });
+
+        // Workspace input
+        document.getElementById('workspace-input-main').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && e.target.value) {
+                createNew('document', e.target.value);
+                e.target.value = '';
+            }
+        });
+
+        function createNew(type, title = '') {
+            if (type === 'document') {
+                const doc = {
+                    id: AppData.documents.length + 1,
+                    title: title || 'Untitled Document',
+                    content: '',
+                    type: 'doc',
+                    updated: new Date()
+                };
+                AppData.documents.unshift(doc);
+                currentDocument = doc;
+                document.getElementById('doc-title').value = doc.title;
+                document.getElementById('doc-editor').innerHTML = doc.content;
+                switchView('document');
+                renderWorkList();
+            } else if (type === 'board') {
+                const board = {
+                    id: AppData.boards.length + 1,
+                    title: 'New Board',
+                    columns: [
+                        { id: 'todo', title: 'To Do', tasks: [] },
+                        { id: 'doing', title: 'In Progress', tasks: [] },
+                        { id: 'done', title: 'Done', tasks: [] }
+                    ],
+                    updated: new Date()
+                };
+                AppData.boards.unshift(board);
+                currentBoard = board;
+                renderBoard(board);
+                switchView('board');
+                renderWorkList();
+            } else if (type === 'chat') {
+                switchView('chat');
+            }
+            document.getElementById('create-menu').style.display = 'none';
+            createMenuOpen = false;
+        }
+
+        // ==================== WORK LIST ====================
+        function renderWorkList() {
+            const list = document.getElementById('work-list');
+            list.innerHTML = '';
+
+            const allItems = [
+                ...AppData.boards.map(b => ({ ...b, type: 'board', icon: 'board' })),
+                ...AppData.documents.map(d => ({ ...d, type: 'doc', icon: 'doc' }))
+            ].sort((a, b) => b.updated - a.updated);
+
+            allItems.forEach(item => {
+                const itemEl = document.createElement('div');
+                itemEl.className = 'work-item';
+                itemEl.innerHTML = `
+                    <div class="work-item-main">
+                        <svg class="work-item-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            ${item.icon === 'board'
+                                ? '<rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect>'
+                                : '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline>'}
+                        </svg>
+                        <div class="work-item-content">
+                            <h3>${item.title}</h3>
+                            <p>${item.type === 'board' ? `${getTotalTasks(item)} tasks` : 'Document'}</p>
+                        </div>
+                    </div>
+                    <div class="work-item-meta">
+                        <span>${item.type === 'board' ? 'Board' : 'Doc'}</span>
+                        <span>·</span>
+                        <span>${formatTime(item.updated)}</span>
+                    </div>
+                `;
+                itemEl.addEventListener('click', () => {
+                    if (item.type === 'board') {
+                        currentBoard = AppData.boards.find(b => b.id === item.id);
+                        renderBoard(currentBoard);
+                        switchView('board');
+                    } else {
+                        currentDocument = AppData.documents.find(d => d.id === item.id);
+                        document.getElementById('doc-title').value = currentDocument.title;
+                        document.getElementById('doc-editor').innerHTML = currentDocument.content;
+                        switchView('document');
+                    }
+                });
+                list.appendChild(itemEl);
+            });
+        }
+
+        function getTotalTasks(board) {
+            return board.columns.reduce((sum, col) => sum + col.tasks.length, 0);
+        }
+
+        function formatTime(date) {
+            const diff = Date.now() - date.getTime();
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const days = Math.floor(hours / 24);
+            if (days > 0) return `${days}d ago`;
+            if (hours > 0) return `${hours}h ago`;
+            return 'just now';
+        }
+
+        // ==================== DOCUMENT EDITOR ====================
+        document.getElementById('doc-title').addEventListener('input', (e) => {
+            if (currentDocument) {
+                currentDocument.title = e.target.value;
+                currentDocument.updated = new Date();
+                renderWorkList();
+            }
+        });
+
+        document.getElementById('doc-editor').addEventListener('input', (e) => {
+            if (currentDocument) {
+                currentDocument.content = e.target.innerHTML;
+                currentDocument.updated = new Date();
+            }
+        });
+
+        document.querySelectorAll('.toolbar-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const cmd = btn.getAttribute('data-cmd');
+                document.execCommand(cmd, false, null);
+                btn.classList.toggle('active');
+            });
+        });
+
+        // ==================== BOARD VIEW ====================
+        function renderBoard(board) {
+            document.getElementById('board-title').textContent = board.title;
+            const container = document.getElementById('board-columns');
+            container.innerHTML = '';
+
+            board.columns.forEach(column => {
+                const colEl = document.createElement('div');
+                colEl.className = 'board-column';
+                colEl.innerHTML = `
+                    <div class="column-header">
+                        <span>${column.title}</span>
+                        <span class="text-secondary">${column.tasks.length}</span>
+                    </div>
+                    <div class="task-list" data-column="${column.id}"></div>
+                    <button class="add-task-btn" data-column="${column.id}">+ Add task</button>
+                `;
+
+                const taskList = colEl.querySelector('.task-list');
+                column.tasks.forEach(task => {
+                    const taskEl = createTaskElement(task);
+                    taskList.appendChild(taskEl);
+                });
+
+                colEl.querySelector('.add-task-btn').addEventListener('click', () => {
+                    const title = prompt('Task title:');
+                    if (title) {
+                        const newTask = {
+                            id: Date.now(),
+                            title,
+                            description: ''
+                        };
+                        column.tasks.push(newTask);
+                        taskList.appendChild(createTaskElement(newTask));
+                        board.updated = new Date();
+                        renderWorkList();
+                    }
+                });
+
+                // Drag and drop
+                taskList.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                });
+
+                taskList.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    if (draggedTask) {
+                        // Remove from old column
+                        board.columns.forEach(col => {
+                            col.tasks = col.tasks.filter(t => t.id !== draggedTask.id);
+                        });
+                        // Add to new column
+                        column.tasks.push(draggedTask);
+                        taskList.appendChild(createTaskElement(draggedTask));
+                        draggedTask = null;
+                        renderBoard(board);
+                    }
+                });
+
+                container.appendChild(colEl);
+            });
+        }
+
+        function createTaskElement(task) {
+            const taskEl = document.createElement('div');
+            taskEl.className = 'task-card';
+            taskEl.draggable = true;
+            taskEl.innerHTML = `
+                <div class="task-title">${task.title}</div>
+                ${task.description ? `<div class="task-meta">${task.description}</div>` : ''}
+            `;
+
+            taskEl.addEventListener('dragstart', () => {
+                draggedTask = task;
+                taskEl.classList.add('dragging');
+            });
+
+            taskEl.addEventListener('dragend', () => {
+                taskEl.classList.remove('dragging');
+            });
+
+            return taskEl;
+        }
+
+        // ==================== CHAT ====================
+        document.getElementById('chat-input').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                const text = e.target.value.trim();
+                if (text) {
+                    addMessage(AppData.user.initials, 'You', text);
+                    e.target.value = '';
+                }
+            }
+        });
+
+        function addMessage(initials, author, text) {
+            const messagesContainer = document.getElementById('chat-messages');
+            const messageEl = document.createElement('div');
+            messageEl.className = 'chat-message';
+            messageEl.innerHTML = `
+                <div class="message-avatar">${initials}</div>
+                <div class="message-content">
+                    <div class="message-header">
+                        <span class="message-author">${author}</span>
+                        <span class="message-time">just now</span>
+                    </div>
+                    <div class="message-text">${text}</div>
+                </div>
+            `;
+            messagesContainer.appendChild(messageEl);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        // ==================== COMMAND PALETTE ====================
         let commandPaletteOpen = false;
 
         function toggleCommandPalette() {
             commandPaletteOpen = !commandPaletteOpen;
             const palette = document.getElementById('command-palette');
-
             if (commandPaletteOpen) {
                 palette.style.display = 'block';
                 document.getElementById('command-input').focus();
+                renderCommandList();
             } else {
                 palette.style.display = 'none';
             }
         }
 
+        function renderCommandList() {
+            const list = document.getElementById('command-list');
+            list.innerHTML = `
+                <div class="command-group">
+                    <div class="command-group-heading">Recent</div>
+                    ${AppData.documents.slice(0, 3).map(doc => `
+                        <div class="command-item" onclick="openDocument(${doc.id})">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                            </svg>
+                            ${doc.title}
+                        </div>
+                    `).join('')}
+                    ${AppData.boards.slice(0, 3).map(board => `
+                        <div class="command-item" onclick="openBoard(${board.id})">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="14" width="7" height="7"></rect>
+                                <rect x="3" y="14" width="7" height="7"></rect>
+                            </svg>
+                            ${board.title}
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="command-group">
+                    <div class="command-group-heading">Actions</div>
+                    <div class="command-item" onclick="createNew('document'); toggleCommandPalette();">New Document</div>
+                    <div class="command-item" onclick="createNew('board'); toggleCommandPalette();">New Board</div>
+                    <div class="command-item" onclick="createNew('chat'); toggleCommandPalette();">New Chat</div>
+                </div>
+            `;
+        }
+
+        function openDocument(id) {
+            currentDocument = AppData.documents.find(d => d.id === id);
+            document.getElementById('doc-title').value = currentDocument.title;
+            document.getElementById('doc-editor').innerHTML = currentDocument.content;
+            switchView('document');
+            toggleCommandPalette();
+        }
+
+        function openBoard(id) {
+            currentBoard = AppData.boards.find(b => b.id === id);
+            renderBoard(currentBoard);
+            switchView('board');
+            toggleCommandPalette();
+        }
+
         // Keyboard shortcuts
         document.addEventListener('keydown', (e) => {
-            // Cmd/Ctrl + K
             if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
                 e.preventDefault();
                 toggleCommandPalette();
             }
-
-            // Escape
             if (e.key === 'Escape' && commandPaletteOpen) {
                 toggleCommandPalette();
             }
         });
 
-        // Close command palette on backdrop click
-        document.querySelector('.command-backdrop')?.addEventListener('click', () => {
-            toggleCommandPalette();
-        });
-
-        // Search triggers
+        document.querySelector('.command-backdrop')?.addEventListener('click', toggleCommandPalette);
         document.getElementById('global-search')?.addEventListener('focus', () => {
             toggleCommandPalette();
             document.getElementById('global-search').blur();
         });
 
         // Filter tabs
-        const filterTabs = document.querySelectorAll('.filter-tab');
-        filterTabs.forEach(tab => {
+        document.querySelectorAll('.filter-tab').forEach(tab => {
             tab.addEventListener('click', function() {
-                filterTabs.forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
                 this.classList.add('active');
             });
-        });
-
-        // Quick actions
-        const quickActions = document.querySelectorAll('.quick-action');
-        quickActions.forEach(action => {
-            action.addEventListener('click', () => {
-                alert('Feature coming soon!');
-            });
-        });
-
-        // Create button
-        document.getElementById('create-btn')?.addEventListener('click', () => {
-            alert('Create menu coming soon!');
         });
     </script>
 </body>
