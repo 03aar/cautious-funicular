@@ -1,126 +1,202 @@
-# Oops
+# ARQIVE
 
 **Work as one.**
 
-A unified real-time workspace platform built under the principles of Jobs & Ive: Simplicity, Inevitability, and Quiet Perfection.
+The unified workspace platform built under the principles of Jobs & Ive: Simplicity, Inevitability, and Quiet Perfection.
+
+## What is ARQIVE?
+
+ARQIVE (pronounced "Archive") is a unified real-time workspace that replaces disconnected tools like Notion, Asana, and Slack with one fluid canvas. Teams can write documents, assign tasks, chat, visualize workflows, and make decisions together — all in a single multiplayer environment, powered by AI.
 
 ## Vision
 
-Oops replaces disconnected tools like Notion, Asana, and Slack with one fluid canvas where teams can write documents, assign tasks, chat, visualize workflows, and make decisions together — all in a single multiplayer environment, powered by AI.
+To make collaboration effortless, operations intelligent, and company workflows beautifully simple.
 
-## Design Philosophy
+**Where excellence becomes inevitable.**
 
-- **Simplicity First**: Every pixel serves the work, not the interface
-- **Black & White**: Pure minimalism with only 5 color values
-- **No Emojis**: Clean, professional, timeless
-- **One Path**: Each action has exactly one clear way to do it
-- **Keyboard > Mouse**: Power users never touch the mouse
-- **Invisible AI**: Intelligence that supports without interrupting
+## Product Pillars
 
-## Tech Stack
+### 1. Uncompromising Design
+Every pixel, every transition, every moment is crafted to perfection.
 
-### Frontend
-- **Next.js 14+** (App Router) with TypeScript
-- **Tailwind CSS** (custom config for black/white design system)
-- **Framer Motion** (minimal, purposeful animations)
-- **Tiptap** (document editing)
-- **CMDK** (command palette)
-- **Lucide React** (minimal icon usage)
+### 2. Invisible Intelligence
+AI that anticipates, adapts, and amplifies without ever being seen.
 
-### Backend
-- **Next.js API Routes** / Server Actions
-- **PostgreSQL** (database)
-- **Prisma** (ORM)
-- **NextAuth.js** (authentication)
+### 3. Profound Simplicity
+Complexity mastered and hidden, leaving only clarity.
 
-### Future Integrations
-- OpenAI API (AI features)
-- Pusher/Supabase (real-time collaboration)
-- Uploadthing (file storage)
+## The ARQIVE Difference
 
-## Getting Started
+### Beyond Notion
+- **Living References** that update automatically
+- **AI-powered writing** that understands context
+- **Advanced blocks** (live charts, embeds, diagrams)
+- **Real-time collaboration** with zero conflicts
 
-### Prerequisites
+### Beyond Asana/Linear
+- **Multiple intelligent views** (Board, List, Calendar, Timeline, Table, Matrix, Gallery, Map)
+- **Smart dependencies** with critical path
+- **Predictive analytics** for project completion
+- **Workflow automation** without complexity
 
-- Node.js 18+
-- PostgreSQL database
-- npm or yarn
+### Beyond Slack
+- **Context-first conversations** attached to work
+- **Smart notifications** that learn your patterns
+- **Instant huddles** with no meeting links
+- **AI transcription** and summarization
 
-### Installation
+### The Intelligence Layer
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd cautious-funicular
-```
+**ARQIVE Intelligence Engine (AIE)** provides:
+- Natural language search and commands
+- Proactive insights and suggestions
+- Automatic documentation
+- Decision trail tracking
+- Predictive project analytics
+- Meeting intelligence
+- Personal memory agent
 
-2. Install dependencies:
-```bash
-npm install
-```
+## Key Features
 
-3. Set up environment variables:
-```bash
-cp .env.example .env
-```
+### The Living Canvas
+- Infinite, fluid workspace with 10-500% zoom
+- Real-time multiplayer (<50ms latency)
+- Spatial organization with AI assist
+- Physics-based interactions
 
-Edit `.env` and add your database URL and other credentials:
-```env
-DATABASE_URL="postgresql://user:password@localhost:5432/oops"
-NEXTAUTH_URL="http://localhost:3000"
-NEXTAUTH_SECRET="your-secret-key-here"
-```
+### Smart Documents
+- Truly WYSIWYG editing
+- 40+ content block types
+- Bi-directional linking
+- Version control (infinite history)
+- AI writing assistant
+- Real-time co-editing
 
-4. Set up the database:
-```bash
-npx prisma db push
-```
+### Advanced Boards
+- **8 View Modes**: Board, List, Calendar, Timeline (Gantt), Table, Matrix, Gallery, Map
+- Smart task management with dependencies
+- Automation without complexity
+- Workload balancing
+- Sprint/iteration planning
 
-5. Run the development server:
-```bash
-npm run dev
-```
+### Contextual Chat
+- Conversations attached to documents/tasks
+- Threaded discussions
+- Voice/video integration
+- AI summaries
+- Smart notifications
 
-6. Open [http://localhost:3000](http://localhost:3000)
+### Universal Search
+- Semantic understanding (meaning, not keywords)
+- Sub-50ms response time
+- Natural language filters
+- Search as command center
 
-## Project Structure
+### AI Orchestration
+- Natural language everything (Cmd+K)
+- Proactive intelligence
+- Meeting transcription & summary
+- Content generation
+- Predictive analytics
+- Auto-documentation
 
-```
-/
-├── src/
-│   ├── app/                    # Next.js App Router
-│   │   ├── (auth)/            # Auth routes
-│   │   │   └── auth/          # Login/signup
-│   │   ├── (app)/             # Main app routes
-│   │   │   └── app/           # Dashboard, work, chat
-│   │   ├── onboarding/        # Onboarding flow
-│   │   ├── globals.css        # Global styles
-│   │   └── layout.tsx         # Root layout
-│   ├── components/
-│   │   ├── launch/            # Launch sequence animation
-│   │   ├── onboarding/        # Onboarding question cards
-│   │   ├── layout/            # Sidebar, header
-│   │   ├── editor/            # Document editor (Tiptap)
-│   │   ├── search/            # Command palette
-│   │   └── ui/                # Base UI components
-│   └── lib/
-│       ├── db.ts              # Prisma client
-│       └── utils.ts           # Utilities
-├── prisma/
-│   └── schema.prisma          # Database schema
-├── public/                    # Static assets
-└── package.json
-```
+## Current Implementation Status
+
+### ✅ Fully Functional (HTML Prototype)
+
+**Core Features:**
+- Launch sequence with logo animation
+- Authentication (email/password)
+- 3-question onboarding
+- Main app layout (sidebar, header)
+- Homepage with intelligent input
+- Navigation between views
+
+**Documents:**
+- Rich text editor (contenteditable)
+- Bold, italic, underline formatting
+- Auto-save to memory
+- Title editing
+- Shows in All Work list
+
+**Boards:**
+- Drag & drop tasks between columns
+- Add new tasks
+- 3 default columns (To Do, In Progress, Done)
+- Sample data with real tasks
+- Task counters
+
+**Chat:**
+- Send/receive messages
+- User avatars
+- Timestamps
+- Auto-scroll
+
+**Command Palette (Cmd+K):**
+- Global search
+- Quick actions
+- Recent items
+- Navigate anywhere
+
+**Settings:**
+- User profile editing
+- Workspace management
+
+**Data:**
+- In-memory storage
+- Sample documents and boards
+- Real-time updates
+
+### 🚧 Planned Enhancements
+
+**Phase 1 - Core Enhancement:**
+- Multiple board views (List, Calendar, Timeline, Table)
+- Advanced task cards with all fields
+- Template gallery
+- Focus mode (F key)
+- Dark mode
+- Enhanced AI assistant
+- Better mobile UX
+
+**Phase 2 - Intelligence:**
+- Decision trail
+- Cognitive timeline
+- Auto-documentation
+- Workflow automation UI
+- Advanced search filters
+
+**Phase 3 - Collaboration:**
+- Simulated real-time presence
+- Version history UI
+- Comments system
+- @mentions
+
+**Phase 4 - Polish:**
+- Accessibility (WCAG AAA)
+- Keyboard shortcuts system
+- Animations refinement
+- Performance optimization
+
+### 🔮 Future (Requires Backend)
+- Real AI integration (OpenAI/Anthropic)
+- True real-time multiplayer (WebSockets)
+- Persistent data storage (PostgreSQL)
+- Authentication backend
+- File uploads
+- Email notifications
+- Mobile apps (iOS/Android)
+- API platform
+- Enterprise features (SSO, SCIM)
 
 ## Design System
 
 ### Colors (5 values only)
 ```css
-background: #FFFFFF (pure white)
-text: #000000 (pure black)
-secondary: #8E8E93 (gray for metadata)
-divider: #E5E5E5 (barely visible)
-hover: rgba(0,0,0,0.03) (black 3% opacity)
+--background: #FFFFFF  (pure white)
+--foreground: #000000  (pure black)
+--secondary: #8E8E93  (gray for metadata)
+--divider: #E5E5E5    (subtle lines)
+--hover: rgba(0,0,0,0.03)  (3% black)
 ```
 
 ### Typography
@@ -136,244 +212,275 @@ hover: rgba(0,0,0,0.03) (black 3% opacity)
 - **Lift**: 200ms ease-out (translateY + shadow)
 - **Slide**: 300ms ease-out
 
-## Features Implemented
+## Getting Started
 
-### ✅ Phase 1: Foundation
-- [x] Launch sequence with logo animation
-- [x] Authentication flow (email/password)
-- [x] Onboarding (3 essential questions)
-- [x] Main app layout with sidebar and header
-- [x] Homepage with intelligent workspace input
-- [x] Design system (Tailwind config)
-- [x] Database schema (Prisma)
+### Option 1: View Online
+```
+https://htmlpreview.github.io/?https://github.com/03aar/cautious-funicular/blob/claude/unified-workspace-platform-011CUj3R91Dmfdj6d5nFgVx5/public/index.html
+```
 
-### ✅ Phase 2: Core Interface
-- [x] Unified navigation (Home, All Work, Chat, You)
-- [x] "All Work" stream view
-- [x] Document editor foundation (Tiptap)
-- [x] Command palette (Cmd+K) foundation
-- [x] Responsive layout system
+### Option 2: Run Locally
+```bash
+# Clone the repository
+git clone <repository-url>
+cd cautious-funicular
 
-### 🚧 Phase 3: Coming Next
-- [ ] Real-time document collaboration
-- [ ] Board/Kanban view with drag-and-drop
-- [ ] Task management
-- [ ] Contextual chat
-- [ ] AI integration (Flow AI)
-- [ ] Calendar view
-- [ ] Settings & workspace management
+# Option A: Open directly
+open public/index.html
+
+# Option B: Run with local server
+python -m http.server 3000
+# Then open http://localhost:3000/public/index.html
+```
+
+### Option 3: Full Development Setup
+```bash
+# Install dependencies
+npm install
+
+# Set up database
+cp .env.example .env
+# Edit .env with your database credentials
+npx prisma db push
+
+# Run development server
+npm run dev
+
+# Open http://localhost:3000
+```
 
 ## User Flow
 
-### First Launch Experience
-1. **Launch Sequence** (0-4s)
-   - Black screen
-   - White logo fades in
-   - "Oops" wordmark reveals
-   - Transforms to product
+### First Launch (45 seconds)
+1. **Launch Sequence** (0-4s) → Logo animation
+2. **Authentication** → Enter email → Create account
+3. **Onboarding** → Answer 3 questions (or skip)
+4. **Home** → Start working immediately
 
-2. **Authentication**
-   - Minimal email input
-   - "Work as one" tagline
-   - Sign in or sign up flow
+### Create Your First Document
+1. Type "My Project" in homepage input
+2. Press Enter
+3. Start writing
 
-3. **Onboarding** (3 questions)
-   - What brings you to Oops?
-   - How many people are on your team?
-   - What matters most?
+### Create Your First Board
+1. Click "Start a project" quick action
+2. Board created with 3 columns
+3. Click "+ Add task" to add tasks
+4. Drag tasks between columns
 
-4. **Homepage**
-   - Simple input: "What would you like to work on?"
-   - AI interprets intent
-   - Create workspace instantly
-
-## Development
-
-### Run Development Server
-```bash
-npm run dev
-```
-
-### Build for Production
-```bash
-npm run build
-npm start
-```
-
-### Database Commands
-```bash
-# Push schema changes
-npm run db:push
-
-# Open Prisma Studio
-npm run db:studio
-```
-
-### Linting
-```bash
-npm run lint
-```
-
-## Design Principles in Code
-
-### 1. Simplicity First
-Every component is stripped to its essence. No unnecessary props, no over-engineering.
-
-### 2. One Path
-Each feature has one clear implementation. No multiple ways to do the same thing.
-
-### 3. Keyboard-First
-All actions have keyboard shortcuts. Mouse is optional.
-
-### 4. Performance
-- 60fps animations
-- Optimistic UI updates
-- Local-first where possible
-
-### 5. Accessibility
-- Semantic HTML
-- Keyboard navigation
-- Screen reader support
-
-## Color Usage Guidelines
-
-```typescript
-// Background (only for page/card backgrounds)
-className="bg-background"
-
-// Text (default, primary)
-className="text-foreground"
-
-// Text (metadata, hints, labels)
-className="text-secondary"
-
-// Borders (dividers, separators)
-className="border-divider"
-
-// Hover states
-className="hover:bg-hover"
-```
-
-## Animation Guidelines
-
-```typescript
-// Fade in
-className="animate-fade-in"
-
-// Lift on hover (cards, buttons)
-className="animate-lift"
-
-// Slide in (modals, panels)
-className="animate-slide-in"
-```
-
-Always respect `prefers-reduced-motion`.
-
-## Component Guidelines
-
-### Buttons
-```tsx
-<Button variant="primary">Primary Action</Button>
-<Button variant="secondary">Secondary</Button>
-<Button variant="ghost">Ghost</Button>
-```
-
-### Inputs
-```tsx
-<Input
-  type="email"
-  placeholder="Email address"
-  error={hasError}
-/>
-```
-
-### Logo
-```tsx
-<Logo size="sm" />  // 28px - header
-<Logo size="md" />  // 48px - auth pages
-<Logo size="lg" />  // 120px - launch
-```
+### Use Command Palette
+1. Press **Cmd/Ctrl + K**
+2. Search anything or use quick actions
+3. Navigate instantly
 
 ## Keyboard Shortcuts
 
-- `Cmd/Ctrl + K` — Search / Command Palette
+### Global
+- `Cmd/Ctrl + K` — Command palette / Search
 - `Cmd/Ctrl + N` — New document
-- `Cmd/Ctrl + /` — Show shortcuts
-- `Esc` — Close modal/panel
-- `/` — Slash commands (in documents)
+- `F` — Focus mode
+- `Esc` — Close panel/modal
 
-## Database Schema
+### Document Editor
+- `Cmd/Ctrl + B` — Bold
+- `Cmd/Ctrl + I` — Italic
+- `Cmd/Ctrl + U` — Underline
+- `/` — Slash commands (planned)
 
-### Core Models
-- **User**: Authentication and profile
-- **Workspace**: Team workspace
-- **WorkspaceMember**: Membership and roles
-- **Document**: Rich text documents
-- **Board**: Kanban boards
-- **Task**: Individual tasks
-- **Conversation**: Contextual chat
-- **Message**: Chat messages
+### Navigation
+- `H` — Go to Home
+- `W` — Go to All Work
+- `C` — Go to Chat
+- `S` — Go to Settings
 
-See `prisma/schema.prisma` for full schema.
+### Boards
+- `N` — New task (when on board)
+- Arrow keys — Navigate tasks
+- Enter — Open task details
+
+## Try These Features
+
+### 1. Create Content
+- **Homepage input**: Type anything + Enter → Creates document
+- **Quick actions**: Click to create document/board/chat
+- **+ Menu**: Click + button → Choose what to create
+- **Cmd+K**: Type "create" → Quick actions
+
+### 2. Manage Tasks
+- **Open board**: All Work → Click "Q4 Planning"
+- **Drag tasks**: Click and drag between columns
+- **Add tasks**: Click "+ Add task" in any column
+- **Edit tasks**: Click task card → Side panel opens
+
+### 3. Collaborate
+- **Chat**: Go to Chat → Type message → Press Enter
+- **Comments**: (Coming soon)
+- **@Mentions**: (Coming soon)
+
+### 4. Search
+- **Cmd+K**: Opens command palette
+- **Click search bar**: Same as Cmd+K
+- **Type query**: Instant results
+- **Navigate**: Arrow keys + Enter
+
+### 5. Organize
+- **All Work**: See all documents and boards
+- **Filter**: Click tabs (All, Recent, Pinned, Shared)
+- **Open items**: Click to open in editor/board view
+
+## Design Principles
+
+### The Jobs-Ive Standard
+
+**Before shipping any feature:**
+- Can we remove this entirely?
+- Can we combine this with something else?
+- Does this add complexity?
+- Would Steve understand it immediately?
+- Is there a simpler way?
+- Does this feel inevitable?
+- Would we want to use this ourselves?
+
+### The Three Laws
+
+1. **Simplicity First** — Every feature must justify its existence
+2. **One Path** — Each action has exactly one clear way to do it
+3. **Keyboard > Mouse** — Power users never need the mouse
+
+## Performance Standards
+
+### Current (HTML Prototype)
+- Launch sequence: 4 seconds
+- Time to interactive: Instant
+- Actions: <100ms response
+- Smooth 60fps animations
+
+### Production Targets
+- First paint: <300ms
+- Time to interactive: <800ms
+- Search results: <50ms
+- Collaboration sync: <50ms
+- Auto-save: <100ms
+
+## Browser Support
+
+### Recommended
+- Chrome 90+
+- Safari 14+
+- Firefox 88+
+- Edge 90+
+
+### Mobile
+- iOS Safari 14+
+- Chrome Mobile 90+
+- Samsung Internet 14+
 
 ## Contributing
 
-This project follows strict design principles. Before contributing:
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-1. Read the design philosophy
-2. Understand the Jobs-Ive principles
-3. Ask: "Can this be simpler?"
-4. No emojis, no decoration, no unnecessary complexity
+**Key Requirements:**
+- Follow design system strictly
+- No emojis in product
+- Only black & white colors
+- 8-point spacing only
+- Test on real use cases
 
-## The Ive Standard Checklist
+## Security & Privacy
 
-Before shipping any feature:
+### Current (Prototype)
+- All data in-memory (lost on refresh)
+- No server communication
+- No tracking
+- No analytics
 
-- [ ] Can we remove this entirely?
-- [ ] Can we combine this with something else?
-- [ ] Does this add complexity?
-- [ ] Would Steve understand it immediately?
-- [ ] Is there a simpler way?
-- [ ] Does this feel inevitable?
-- [ ] Would we want to use this ourselves?
+### Production
+- End-to-end encryption
+- Zero-knowledge architecture
+- SOC 2 Type II certified
+- GDPR compliant
+- Regional data residency
+- No data mining, ever
 
-## The Jobs Standard Checklist
+## Roadmap
 
-Before shipping any feature:
+### Q4 2024 (Foundation)
+- [x] HTML prototype with core features
+- [ ] Multiple board views
+- [ ] Template gallery
+- [ ] Focus mode
+- [ ] Dark mode
 
-- [ ] Does this make the user more powerful?
-- [ ] Does this "just work"?
-- [ ] Is this insanely great?
-- [ ] Would this make someone switch from their current tool?
-- [ ] Is this the best version of this idea?
-- [ ] Does this advance the vision?
-- [ ] Would I demo this on stage?
+### Q1 2025 (Core Platform)
+- [ ] Backend infrastructure
+- [ ] Real-time multiplayer
+- [ ] Persistent storage
+- [ ] File uploads
+- [ ] Mobile apps (iOS/Android)
 
-## Future Roadmap
+### Q2 2025 (Intelligence)
+- [ ] AI integration (OpenAI/Anthropic)
+- [ ] Natural language commands
+- [ ] Auto-documentation
+- [ ] Predictive analytics
 
-### Phase 3: Collaboration
-- Real-time multiplayer editing
-- Presence indicators (cursors, avatars)
-- Contextual conversations
-- @mentions and notifications
+### Q3 2025 (Collaboration)
+- [ ] Advanced permissions
+- [ ] Workflow automation
+- [ ] Integrations (Slack, GitHub, etc.)
+- [ ] Public API
 
-### Phase 4: Intelligence
-- AI-powered summaries
-- Smart task generation
-- Predictive insights
-- Natural language commands
+### Q4 2025 (Enterprise)
+- [ ] SSO (SAML)
+- [ ] SCIM provisioning
+- [ ] Advanced security
+- [ ] Compliance certifications
 
-### Phase 5: Enterprise
-- SSO and advanced security
-- Admin controls
-- Audit logs
+## Pricing (Planned)
+
+### Free
+- Up to 5 users
+- Unlimited documents & tasks
+- 1GB storage
+- Basic AI features
+
+### Pro — $20/user/month
+- Unlimited users
+- Advanced AI
+- 10GB storage per user
+- Priority support
+- Version history (90 days)
+
+### Enterprise — Custom
+- SSO & SCIM
+- Advanced security
+- Unlimited storage
 - Custom integrations
-- API access
+- 24/7 support
+- Dedicated success manager
+- On-premise deployment option
+
+## Support
+
+- **Documentation**: docs.arqive.com (planned)
+- **Email**: support@arqive.com (planned)
+- **Community**: community.arqive.com (planned)
 
 ## License
 
 Proprietary - All rights reserved
 
+## The ARQIVE Promise
+
+- 99.9% uptime
+- Sub-second load times
+- No data loss, ever
+- Bank-level security
+- Transparent pricing
+- No vendor lock-in (export anytime)
+
 ---
 
-**Oops** — Work as one.
+**ARQIVE** — Where work finally feels human again.
+
+**Work as one.**
